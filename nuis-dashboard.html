@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NUIS CLARK Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      background-color: #2e3c8d;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 4px solid #f9b233;
+    }
+
+    .topbar .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topbar .left img {
+      height: 30px;
+    }
+
+    .topbar .right {
+      font-size: 14px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 40px;
+      align-items: center;
+    }
+
+    .greeting {
+      color: #006699;
+      font-size: 16px;
+      margin-bottom: 20px;
+      align-self: flex-start; 
+    }
+
+    
+    .controls-wrapper {
+      position: relative;
+      width: 800px; 
+      height: 40px; 
+      margin-bottom: 10px;
+    }
+
+    
+    .home-icon-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      gap: 6px;
+    }
+
+    .home-icon-wrapper .icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .home-icon-wrapper .label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+   
+    .search-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .search-box input {
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 180px;
+    }
+
+   
+    .separator {
+      width: 800px;
+      border: none;
+      border-top: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+      width: 800px;
+    }
+
+   
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      position: relative;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+   
+    .card:hover {
+      box-shadow: 0 6px 15px rgba(46, 60, 141, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #2e3c8d;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #444;
+      flex-grow: 1;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #666;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #ccc;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    footer a {
+      color: #2e3c8d;
+      text-decoration: none;
+    }
+     .back-button-container {
+      margin: 50px 0 0;
+      align-self: flex-start;
+    }
+    .back-button {
+      background-color: #2e3c8d;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #1d2c6c;
+    }
+    
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="left">
+      <img src="NU_shield.svg.png" alt="NU Logo" />
+      <strong>NUIS CLARK</strong>
+    </div>
+    <div class="right">
+      🔔 Hi, Nicko
+    </div>
+  </div>
+
+  <div class="main-content">
+    <p class="greeting">Good afternoon, welcome to your control center!</p>
+
+    <div class="controls-wrapper">
+      <div class="home-icon-wrapper">
+        <div class="icon">🏠</div>
+        <div class="label">Home</div>
+      </div>
+
+      <div class="search-box">
+        🔍 <input type="text" placeholder="Search.." />
+      </div>
+    </div>
+
+    <hr class="separator" />
+
+    <div class="cards">
+      <a href="documents.html" class="card" tabindex="0">
+        <h3>📁 Documents & Manuals</h3>
+        <p>Collection of documents, forms and manuals for administration, students, faculty, and staff.</p>
+      </a>
+
+      <a href="student-services.html" class="card" tabindex="0">
+        <h3>🎓 Student Services</h3>
+        <p>Group of modules for student development, activities, and services.</p>
+      </a>
+
+      <a href="students.html" class="card" tabindex="0">
+        <h3>🧑‍🎓 Students</h3>
+        <p>Stores and tracks all student information, including grades, accountabilities, and more.</p>
+      </a>
+      <div class="back-button-container">
+        <a href="NuWebApp.html" class="back-button">← Back</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div><a href="#">National University</a> © 2025</div>
+    <div><a href="#">Privacy Policy</a></div>
+  </footer>
+
+</body>
+</html>
